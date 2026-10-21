@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://ko-fi.com/josepilas" target="_blank" rel="noopener noreferrer">
+    <img src="https://josepilas.github.io/kofi.webp" alt="Ko-fi" width="300" />
+  </a>
+</p>
+
 # Pilas-melonDS
 
 Pilas-melonDS is the HTML5/WebAssembly frontend for melonDS. It builds the
