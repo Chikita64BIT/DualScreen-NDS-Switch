@@ -1,0 +1,18 @@
+{
+  "name": "dualscreen-nds-switch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emulador de Nintendo DS para jogar no navegador do Nintendo Switch: o PC roda o melonDS e transmite as duas telas pela rede.",
+  "license": "MPL-2.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON src/server.js"
+  },
+  "engines": {
+    "node": ">=20.11"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5",
+    "ws": "^8.22.1"
+  }
+}

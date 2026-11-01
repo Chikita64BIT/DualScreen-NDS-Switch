@@ -2232,7 +2232,10 @@ async function bootCore() {
     await autoloadRomFromQuery();
   } catch (error) {
     coreValue.textContent = "missing";
-    setStatus("WASM core not found");
+    // The Switch browser ships without JIT, so WebAssembly is absent there.
+    setStatus(typeof WebAssembly === "undefined"
+      ? "Este navegador não suporta WebAssembly"
+      : `WASM core not found: ${error?.message || error}`);
     console.error(error);
   }
 }

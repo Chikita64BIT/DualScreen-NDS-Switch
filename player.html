@@ -1,41 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pilas-melonDS</title>
+  <title>Emulador Nintendo DS</title>
   <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
   <main class="app-shell">
     <header class="topbar">
       <div class="brand">
-        <span class="mark">PM</span>
+        <span class="mark">DS</span>
         <div>
-          <h1>Pilas-melonDS</h1>
-          <p id="statusText">Initializing</p>
+          <h1>Emulador Nintendo DS</h1>
+          <p id="statusText">Inicializando</p>
         </div>
       </div>
       <div class="actions">
+        <a class="file-button" href="/">Biblioteca</a>
         <label class="file-button">
-          ROM
+          Abrir ROM
           <input id="romInput" type="file" accept=".nds,.dsi,.srl,application/octet-stream">
         </label>
         <label class="file-button">
-          Install .cia file
+          Instalar DSiWare (.cia)
           <input id="ciaInput" type="file" accept=".cia,application/octet-stream">
         </label>
-        <button id="bootMenuBtn" type="button" disabled>Boot menu</button>
-        <button id="pauseBtn" type="button" disabled>Pause</button>
-        <button id="resetBtn" type="button" disabled>Reset</button>
-        <button id="audioBtn" type="button" disabled>Audio</button>
+        <button id="bootMenuBtn" type="button" disabled>Menu do console</button>
+        <button id="pauseBtn" type="button" disabled>Pausar</button>
+        <button id="resetBtn" type="button" disabled>Reiniciar</button>
+        <button id="audioBtn" type="button" disabled>Áudio</button>
       </div>
     </header>
 
     <section class="workspace">
       <div class="stage">
-        <canvas id="screenCanvas" width="256" height="384" tabindex="0" aria-label="Nintendo DS video"></canvas>
-        <button id="fullscreenExitBtn" class="fullscreen-exit" type="button">Exit</button>
+        <canvas id="screenCanvas" width="256" height="384" tabindex="0" aria-label="Vídeo do Nintendo DS"></canvas>
+        <button id="fullscreenExitBtn" class="fullscreen-exit" type="button">Sair</button>
         <div id="virtualControls" class="touch-controls virtual-controls" aria-label="Touch controls">
           <div class="mobile-shoulders">
             <button data-bit="9" type="button">L</button>

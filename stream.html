@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0b0d11">
+    <title>DualScreen — Streaming</title>
+    <link rel="stylesheet" href="./src/stream.css">
+  </head>
+  <body>
+    <div class="app" id="app" data-layout="stack">
+      <header class="bar">
+        <a class="bar-back" href="/" id="backLink" aria-label="Voltar à biblioteca">‹ Biblioteca</a>
+        <div class="bar-title" id="gameTitle">Conectando…</div>
+        <div class="bar-turbo" id="turboBadge" hidden>TURBO</div>
+        <div class="bar-stats"><span id="fpsValue">--</span> FPS</div>
+        <button class="bar-menu" id="menuButton" type="button">Menu</button>
+      </header>
+
+      <div class="play-area">
+        <div class="pad pad-left">
+          <div class="small-btn" data-bit="2">SELECT</div>
+        </div>
+
+        <div class="screens" id="screens">
+          <canvas class="screen" id="topScreen" width="256" height="192"></canvas>
+          <canvas class="screen touch" id="bottomScreen" width="256" height="192"></canvas>
+        </div>
+
+        <div class="pad pad-right">
+          <div class="small-btn" data-bit="3">START</div>
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="spinner" id="spinner"></div>
+          <p id="overlayText">Conectando ao PC…</p>
+        </div>
+      </div>
+
+      <div class="menu" id="menu" hidden>
+        <div class="menu-card">
+          <h2>Menu</h2>
+          <div class="menu-row">
+            <button type="button" data-action="pause" id="pauseButton">Pausar</button>
+            <button type="button" data-action="reset">Reiniciar</button>
+          </div>
+          <h3>Estados salvos</h3>
+          <div class="menu-row slots">
+            <button type="button" data-action="save-state" data-slot="1">Salvar 1</button>
+            <button type="button" data-action="save-state" data-slot="2">Salvar 2</button>
+            <button type="button" data-action="save-state" data-slot="3">Salvar 3</button>
+          </div>
+          <div class="menu-row slots">
+            <button type="button" data-action="load-state" data-slot="1">Carregar 1</button>
+            <button type="button" data-action="load-state" data-slot="2">Carregar 2</button>
+            <button type="button" data-action="load-state" data-slot="3">Carregar 3</button>
+          </div>
+          <h3>Imagem</h3>
+          <div class="menu-row">
+            <button type="button" data-action="layout" id="layoutButton">Telas lado a lado</button>
+            <button type="button" data-action="quality" id="qualityButton">Qualidade: média</button>
+          </div>
+          <h3>Controle do Switch</h3>
+          <p class="menu-note pad-status" id="padStatus">Nenhum controle detectado. Aperte um botão do Joy-Con.</p>
+          <div class="menu-row">
+            <button type="button" data-action="pad-setup">Configurar botões</button>
+            <button type="button" data-action="pad-reset">Botões padrão</button>
+          </div>
+          <p class="menu-note" id="padMapText"></p>
+          <div class="capture" id="captureBox" hidden>
+            <p id="captureText"></p>
+            <div class="menu-row">
+              <button type="button" data-action="pad-cancel">Cancelar</button>
+            </div>
+          </div>
+          <div class="menu-row">
+            <a class="menu-link" href="/">Sair para a biblioteca</a>
+            <button type="button" data-action="close" class="primary">Voltar ao jogo</button>
+          </div>
+          <p class="menu-note">O jogo roda no PC; o Switch recebe a imagem pela rede. O som não é transmitido.</p>
+        </div>
+      </div>
+
+      <div class="toast" id="toast" hidden></div>
+    </div>
+    <script src="./src/stream.js" defer></script>
+  </body>
+</html>
