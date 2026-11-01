@@ -59,7 +59,7 @@ roms/
 
    ```text
    DualScreen está pronto:
-     http://IP_DO_PC:8888
+     http://SeuIP:8888
    ```
 
 5. A biblioteca também abre no navegador do PC. Deixe a janela do terminal aberta enquanto joga.
