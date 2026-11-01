@@ -65,7 +65,8 @@ Configurações por variável de ambiente: `PORT` (padrão `8888`) e `HOST` (pad
 
 | Switch | Nintendo DS |
 |---|---|
-| A, B, X, Y | A, B, X, Y |
+| A, B, Y | A, B, Y |
+| X na tela | X (o X físico pode abrir a saída do navegador) |
 | L, R | L, R |
 | + / − | Start / Select |
 | D-pad ou analógico esquerdo | Direcional |
@@ -74,6 +75,8 @@ Configurações por variável de ambiente: `PORT` (padrão `8888`) e `HOST` (pad
 | ZR | Menu |
 
 Se algum botão não responder, use **Menu → Configurar botões**.
+
+No navegador interno do Switch, o **X físico** pode abrir a confirmação para sair. É um comando do próprio navegador. Para usar o X do jogo sem essa janela, toque no botão **X** ao lado da tela do DS. O menu também oferece remapeamento para outro botão do controle.
 
 ## Limitações
 

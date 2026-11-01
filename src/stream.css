@@ -36,6 +36,7 @@ button, a { font: inherit; color: inherit; }
 
 .pad { flex: 1; min-width: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 6px; }
 .small-btn { width: 96px; padding: 16px 0; border-radius: 99px; background: var(--panel-raised); border: 1px solid var(--line); text-align: center; font: 13px var(--mono); letter-spacing: .08em; }
+.small-btn + .small-btn { margin-top: 12px; }
 
 [data-bit].pressed { background: var(--press); border-color: var(--mint); color: var(--ink); }
 

@@ -90,13 +90,16 @@ Avisos sobre esse método:
 
 | Switch | Nintendo DS |
 |---|---|
-| A, B, X, Y | A, B, X, Y |
+| A, B, Y | A, B, Y |
+| X na tela | X (o X físico pode abrir a saída do navegador) |
 | L, R | L, R |
 | + / − | Start / Select |
 | D-pad ou analógico esquerdo | Direcional |
 | Toque na tela inferior | Stylus |
 | ZL (segurar) | Turbo |
 | ZR | Menu |
+
+Se o **X físico** abrir a confirmação de saída do navegador do Switch, use o botão **X** na tela, ao lado do START. Essa confirmação pertence ao navegador do console.
 
 No **menu** você encontra:
 

@@ -375,7 +375,10 @@
       flushTurbo();
       return;
     }
-    if (event.code === "Escape") {
+    if (event.code === "Escape" || event.key === "Escape" || event.keyCode === 27) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.repeat) return;
       toggleMenu();
       return;
     }
